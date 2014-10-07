@@ -20,10 +20,10 @@ app.controller('homeCtrl', ['$scope', function($scope) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example - example-example26-production</title>
+  <title>fhNgLocalize</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
 </head>
-<body ng-app="sdi">
+<body ng-app="app">
     <div ng-controller="homeCtrl as ctrl">
         {{ctrl.content.title|l10n}}
     </div>

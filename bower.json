@@ -1,7 +1,7 @@
 {
-  "name": "fhLocalize",
+  "name": "fh-ng-localize",
   "version": "0.0.1",
-  "homepage": "https://github.com/thefuturehaus/fhLocalize",
+  "homepage": "https://github.com/thefuturehaus/fhNgLocalize",
   "authors": [
     "Josh Turmel <jturmel@gmail.com>"
   ],
