@@ -6,7 +6,7 @@
     "Josh Turmel <jturmel@gmail.com>"
   ],
   "description": "Simple AngularJS filter to load localized strings from a dictionary",
-  "main": "fhLocalize.js",
+  "main": "fhNgLocalize.js",
   "keywords": [
     "angularjs",
     "angular",
