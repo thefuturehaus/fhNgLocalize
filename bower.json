@@ -1,0 +1,28 @@
+{
+  "name": "fhLocalize",
+  "version": "0.0.1",
+  "homepage": "https://github.com/thefuturehaus/fhLocalize",
+  "authors": [
+    "Josh Turmel <jturmel@gmail.com>"
+  ],
+  "description": "Simple AngularJS filter to load localized strings from a dictionary",
+  "main": "fhLocalize.js",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "localization",
+    "localize",
+    "filter"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.0"
+  }
+}
