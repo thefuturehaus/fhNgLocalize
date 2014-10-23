@@ -21,7 +21,7 @@
     }
   });
 
-  angular.module('fhNgLocalize').filter('l10n', function($rootScope, l10n, $log) {
+  angular.module('fhNgLocalize').filter('l10n', ['$rootScope', 'l10n', '$log', function($rootScope, l10n, $log) {
     return function(input) {
       try {
         return input[l10n.lang] || input[l10n.defaultLang];
@@ -31,5 +31,5 @@
       }
       return null;
     };
-  });
+  }]);
 })();
