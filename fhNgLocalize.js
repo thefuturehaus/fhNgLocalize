@@ -21,9 +21,15 @@
     }
   });
 
-  angular.module('fhNgLocalize').filter('l10n', ['$rootScope', 'l10n', function($rootScope, l10n) {
+  angular.module('fhNgLocalize').filter('l10n', function($rootScope, l10n, $log) {
     return function(input) {
-      return input[l10n.lang] || input[l10n.defaultLang];
+      try {
+        return input[l10n.lang] || input[l10n.defaultLang];
+      }
+      catch (err) {
+        $log.error('fhNgLocalize: error localizing input', err);
+      }
+      return null;
     };
-  }]);
+  });
 })();
