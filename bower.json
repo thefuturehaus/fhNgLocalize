@@ -1,9 +1,10 @@
 {
   "name": "fh-ng-localize",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/thefuturehaus/fhNgLocalize",
   "authors": [
-    "Josh Turmel <jturmel@gmail.com>"
+    "Josh Turmel <jt@futurehaus.com>",
+    "Kevin Morey <kevin@futurehaus.com>"
   ],
   "description": "Simple AngularJS filter to load localized strings from a dictionary",
   "main": "fhNgLocalize.js",

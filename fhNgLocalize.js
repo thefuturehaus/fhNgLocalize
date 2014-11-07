@@ -3,6 +3,7 @@
   angular.module('fhNgLocalize', []);
 
   angular.module('fhNgLocalize').provider('l10n', function () {
+    var verbose;
     var defaultLang;
     var lang;
     return {
@@ -11,6 +12,9 @@
       },
       setLang: function(value) {
         lang = value;
+      },
+      setVerbose: function(value) {
+        verbose = value;
       },
       $get: function () {
         return {
@@ -27,7 +31,9 @@
         return input[l10n.lang] || input[l10n.defaultLang];
       }
       catch (err) {
-        $log.error('fhNgLocalize: error localizing input', err);
+        if (l10n.verbose) {
+          $log.error('fhNgLocalize: error localizing input', err);
+        }
       }
       return null;
     };
