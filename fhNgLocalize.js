@@ -6,19 +6,21 @@
     var verbose;
     var defaultLang;
     var lang;
+    var setLang = function(value) {
+      lang = value;
+    };
     return {
       setDefaultLang: function(value) {
         defaultLang = value;
       },
-      setLang: function(value) {
-        lang = value;
-      },
+      setLang: setLang,
       setVerbose: function(value) {
         verbose = value;
       },
       $get: function () {
         return {
           defaultLang: defaultLang,
+          setLang: setLang,
           lang: lang
         }
       }
