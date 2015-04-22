@@ -8,8 +8,14 @@
     var verbose;
     var defaultLang;
     var lang;
+    var getLang = function() {
+      return lang;
+    };
     var setLang = function(value) {
       lang = value;
+    };
+    var getDefaultLang = function() {
+      return defaultLang;
     };
     var invert = function(obj) {
       var inverted = {};
@@ -32,9 +38,9 @@
       },
       $get: function () {
         return {
-          defaultLang: defaultLang,
+          getDefaultLang: getDefaultLang,
+          getLang: getLang,
           setLang: setLang,
-          lang: lang,
           isDefaultLang: function() { return lang === defaultLang; },
           setTranslations: setTranslations,
           getTranslations: function() { return translations; },
@@ -80,7 +86,9 @@
   angular.module('fhNgLocalize').filter('l10n', ['$rootScope', 'l10n', '$log', function($rootScope, l10n, $log) {
     return function(input) {
       try {
-        return input[l10n.lang] || input[l10n.defaultLang];
+        var lang = l10n.getLang();
+        var defaultLang = l10n.getDefaultLang();
+        return input[lang] || input[defaultLang];
       }
       catch (err) {
         if (l10n.verbose) {
